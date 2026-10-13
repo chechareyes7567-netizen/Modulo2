@@ -962,7 +962,7 @@
   {
     "id": "m2-061",
     "module": 2,
-    "topic": "Catabolismo de esqueletos carbonados",
+    "topic": "Catabolismo de proteínas y nitrógeno",
     "question": "¿En qué dos grupos se clasifican los aminoácidos según el destino de sus esqueletos carbonados?",
     "options": [
       "Glucogénicos y cetogénicos",
@@ -974,5 +974,629 @@
     "explanation": "La página disponible del capítulo 29 distingue destinos glucogénicos y cetogénicos.",
     "source": "HarperCap 28 S14.pdf",
     "page": 298
+  },
+  {
+    "id": "m2-062",
+    "module": 2,
+    "topic": "Oxidación biológica",
+    "question": "¿En qué sentido tienden a fluir los electrones entre pares redox?",
+    "options": [
+      "Desde un potencial más negativo hacia uno más positivo",
+      "Desde el par con potencial más positivo hacia el más negativo",
+      "Solo desde agua hacia oxígeno",
+      "Sin relación con el potencial redox"
+    ],
+    "answer": 0,
+    "explanation": "La diferencia de potencial redox permite predecir la dirección espontánea del flujo electrónico.",
+    "source": "HarperCap12oxidacion bilogica.pdf",
+    "page": 119
+  },
+  {
+    "id": "m2-063",
+    "module": 2,
+    "topic": "Oxidación biológica",
+    "question": "¿Qué metal contiene la xantina oxidasa mencionada en el capítulo?",
+    "options": [
+      "Molibdeno",
+      "Sodio",
+      "Cobalto",
+      "Magnesio"
+    ],
+    "answer": 0,
+    "explanation": "La xantina oxidasa se presenta como una oxidasa que contiene molibdeno.",
+    "source": "HarperCap12oxidacion bilogica.pdf",
+    "page": 120
+  },
+  {
+    "id": "m2-064",
+    "module": 2,
+    "topic": "Oxidación biológica",
+    "question": "¿Con qué tipo de metabolismo se asocia especialmente el NADPH?",
+    "options": [
+      "Síntesis reductora",
+      "Degradación proteica en proteasomas",
+      "Fosforólisis del glucógeno",
+      "Síntesis de urea exclusivamente"
+    ],
+    "answer": 0,
+    "explanation": "El NADPH aporta poder reductor, por ejemplo en la síntesis de ácidos grasos.",
+    "source": "HarperCap12oxidacion bilogica.pdf",
+    "page": 121
+  },
+  {
+    "id": "m2-065",
+    "module": 2,
+    "topic": "Oxidación biológica",
+    "question": "¿Qué incorporan las dioxigenasas a su sustrato?",
+    "options": [
+      "Ambos átomos del oxígeno molecular",
+      "Un grupo glucosilo",
+      "Un átomo de nitrógeno de urea",
+      "Exclusivamente hidrógeno"
+    ],
+    "answer": 0,
+    "explanation": "Las dioxigenasas incorporan los dos átomos de una molécula de O₂.",
+    "source": "HarperCap12oxidacion bilogica.pdf",
+    "page": 123
+  },
+  {
+    "id": "m2-066",
+    "module": 2,
+    "topic": "Oxidación biológica",
+    "question": "¿Cómo se llaman las oxigenasas que incorporan un solo átomo de oxígeno al sustrato?",
+    "options": [
+      "Monooxigenasas",
+      "Transaminasas",
+      "Fosfatasas",
+      "Glucosidasas"
+    ],
+    "answer": 0,
+    "explanation": "Las monooxigenasas incorporan un átomo de O₂ al sustrato y reducen el otro.",
+    "source": "HarperCap12oxidacion bilogica.pdf",
+    "page": 123
+  },
+  {
+    "id": "m2-067",
+    "module": 2,
+    "topic": "Oxidación biológica",
+    "question": "Además de metabolizar fármacos, ¿en qué síntesis participa el citocromo P450?",
+    "options": [
+      "Síntesis de esteroides",
+      "Síntesis directa de glucógeno",
+      "Síntesis del enlace peptídico",
+      "Síntesis de urea exclusivamente"
+    ],
+    "answer": 0,
+    "explanation": "El sistema P450 interviene en metabolismo de xenobióticos y en síntesis de esteroides.",
+    "source": "HarperCap12oxidacion bilogica.pdf",
+    "page": 124
+  },
+  {
+    "id": "m2-068",
+    "module": 2,
+    "topic": "Metabolismo del glucógeno",
+    "question": "¿Qué enlaces unen principalmente los residuos de glucosa en las cadenas lineales de glucógeno?",
+    "options": [
+      "Enlaces α(1→4)",
+      "Enlaces β(1→4)",
+      "Enlaces peptídicos",
+      "Enlaces fosfodiéster"
+    ],
+    "answer": 0,
+    "explanation": "Las cadenas lineales presentan enlaces glucosídicos α(1→4).",
+    "source": "HarperCap18Met glucogeno.pdf",
+    "page": 176
+  },
+  {
+    "id": "m2-069",
+    "module": 2,
+    "topic": "Metabolismo del glucógeno",
+    "question": "¿Sobre qué tipo de residuo de la glucogenina comienza la glucosilación del cebador?",
+    "options": [
+      "Tirosina",
+      "Glicina",
+      "Cisteína",
+      "Triptófano"
+    ],
+    "answer": 0,
+    "explanation": "La glucogenina se glucosila sobre un residuo específico de tirosina.",
+    "source": "HarperCap18Met glucogeno.pdf",
+    "page": 177
+  },
+  {
+    "id": "m2-070",
+    "module": 2,
+    "topic": "Metabolismo del glucógeno",
+    "question": "¿Qué enzima resuelve los puntos de ramificación durante la glucogenólisis?",
+    "options": [
+      "Enzima desramificadora",
+      "Glucógeno sintasa",
+      "Piruvato carboxilasa",
+      "ATP sintasa"
+    ],
+    "answer": 0,
+    "explanation": "La enzima desramificadora permite continuar la degradación alrededor de enlaces α(1→6).",
+    "source": "HarperCap18Met glucogeno.pdf",
+    "page": 178
+  },
+  {
+    "id": "m2-071",
+    "module": 2,
+    "topic": "Metabolismo del glucógeno",
+    "question": "¿Qué compartimento acumula glucógeno en la enfermedad de Pompe?",
+    "options": [
+      "Lisosomas",
+      "Núcleo",
+      "Citosol exclusivamente",
+      "Peroxisomas exclusivamente"
+    ],
+    "answer": 0,
+    "explanation": "La enfermedad de Pompe se caracteriza por acumulación lisosomal de glucógeno.",
+    "source": "HarperCap18Met glucogeno.pdf",
+    "page": 179
+  },
+  {
+    "id": "m2-072",
+    "module": 2,
+    "topic": "Metabolismo del glucógeno",
+    "question": "¿En qué tejido no actúa el glucagón según el esquema de regulación de glucógeno?",
+    "options": [
+      "Músculo esquelético",
+      "Hígado",
+      "Músculo cardíaco",
+      "Células hepáticas"
+    ],
+    "answer": 0,
+    "explanation": "El esquema señala que el glucagón no actúa en músculo esquelético, aunque sí en hígado y músculo cardíaco.",
+    "source": "HarperCap18Met glucogeno.pdf",
+    "page": 177
+  },
+  {
+    "id": "m2-073",
+    "module": 2,
+    "topic": "Metabolismo del glucógeno",
+    "question": "¿Qué efecto ejerce la insulina sobre el aumento de cAMP inducido por glucagón o epinefrina?",
+    "options": [
+      "Lo contrarresta",
+      "Lo vuelve irreversible",
+      "Lo multiplica indefinidamente",
+      "Lo convierte en NADPH"
+    ],
+    "answer": 0,
+    "explanation": "La insulina antagoniza el aumento de cAMP provocado por estas hormonas.",
+    "source": "HarperCap18Met glucogeno.pdf",
+    "page": 177
+  },
+  {
+    "id": "m2-074",
+    "module": 2,
+    "topic": "Gluconeogénesis y glucemia",
+    "question": "¿Qué producto de los ácidos grasos de cadena impar puede contribuir a la gluconeogénesis?",
+    "options": [
+      "Propionato",
+      "Palmitato",
+      "Colesterol",
+      "Araquidonato"
+    ],
+    "answer": 0,
+    "explanation": "El propionato figura entre los sustratos gluconeogénicos.",
+    "source": "HarperCap19.pdf",
+    "page": 185
+  },
+  {
+    "id": "m2-075",
+    "module": 2,
+    "topic": "Gluconeogénesis y glucemia",
+    "question": "¿Qué vitamina actúa como coenzima de la piruvato carboxilasa?",
+    "options": [
+      "Biotina",
+      "Riboflavina",
+      "Vitamina C",
+      "Vitamina K"
+    ],
+    "answer": 0,
+    "explanation": "La biotina participa en la transferencia de CO₂ catalizada por piruvato carboxilasa.",
+    "source": "HarperCap19.pdf",
+    "page": 185
+  },
+  {
+    "id": "m2-076",
+    "module": 2,
+    "topic": "Gluconeogénesis y glucemia",
+    "question": "¿Qué molécula activa la piruvato carboxilasa?",
+    "options": [
+      "Acetil-CoA",
+      "Glucosa libre",
+      "Urea",
+      "Glucógeno"
+    ],
+    "answer": 0,
+    "explanation": "La disponibilidad de acetil-CoA favorece la reacción de carboxilación de piruvato.",
+    "source": "HarperCap19.pdf",
+    "page": 185
+  },
+  {
+    "id": "m2-077",
+    "module": 2,
+    "topic": "Gluconeogénesis y glucemia",
+    "question": "¿Cómo se denomina el ciclo que intercambia lactato muscular y glucosa hepática?",
+    "options": [
+      "Ciclo de Cori",
+      "Ciclo de la urea",
+      "Ciclo de la pentosa",
+      "Ciclo del colesterol"
+    ],
+    "answer": 0,
+    "explanation": "El hígado reutiliza lactato para formar glucosa dentro del ciclo de Cori.",
+    "source": "HarperCap19.pdf",
+    "page": 190
+  },
+  {
+    "id": "m2-078",
+    "module": 2,
+    "topic": "Gluconeogénesis y glucemia",
+    "question": "¿Qué metabolito alivia la inhibición de la fosfofructocinasa-1 ejercida por ATP?",
+    "options": [
+      "AMP",
+      "UDP-glucosa",
+      "Malonil-CoA",
+      "Citrulina"
+    ],
+    "answer": 0,
+    "explanation": "El AMP señala baja energía celular y atenúa la inhibición por ATP.",
+    "source": "HarperCap19.pdf",
+    "page": 189
+  },
+  {
+    "id": "m2-079",
+    "module": 2,
+    "topic": "Gluconeogénesis y glucemia",
+    "question": "Además del hígado, ¿qué órgano contribuye a la producción de glucosa por gluconeogénesis?",
+    "options": [
+      "Riñón",
+      "Eritrocito",
+      "Cartílago",
+      "Piel"
+    ],
+    "answer": 0,
+    "explanation": "Los riñones constituyen otro tejido gluconeogénico importante.",
+    "source": "HarperCap19.pdf",
+    "page": 185
+  },
+  {
+    "id": "m2-080",
+    "module": 2,
+    "topic": "Pentosas y metabolismo de hexosas",
+    "question": "¿Qué pentosa fosfato surge de la etapa oxidativa antes de su conversión en ribosa 5-fosfato?",
+    "options": [
+      "Ribulosa 5-fosfato",
+      "Glucosa 1-fosfato",
+      "Fructosa 1,6-bisfosfato",
+      "Glicerol 3-fosfato"
+    ],
+    "answer": 0,
+    "explanation": "La descarboxilación oxidativa forma ribulosa 5-fosfato.",
+    "source": "HarperCap20.pdf",
+    "page": 198
+  },
+  {
+    "id": "m2-081",
+    "module": 2,
+    "topic": "Pentosas y metabolismo de hexosas",
+    "question": "¿De qué vitamina deriva la coenzima de la transcetolasa?",
+    "options": [
+      "Tiamina (B₁)",
+      "Ácido ascórbico (C)",
+      "Vitamina K",
+      "Vitamina D"
+    ],
+    "answer": 0,
+    "explanation": "La transcetolasa emplea difosfato de tiamina.",
+    "source": "HarperCap20.pdf",
+    "page": 198
+  },
+  {
+    "id": "m2-082",
+    "module": 2,
+    "topic": "Pentosas y metabolismo de hexosas",
+    "question": "¿Qué sistema antioxidante eritrocítico depende del NADPH?",
+    "options": [
+      "Glutatión reducido",
+      "Sistema de ubiquitina",
+      "Ciclo de la urea",
+      "Síntesis de colágeno"
+    ],
+    "answer": 0,
+    "explanation": "El NADPH mantiene glutatión reducido que ayuda a proteger a los eritrocitos.",
+    "source": "HarperCap20.pdf",
+    "page": 200
+  },
+  {
+    "id": "m2-083",
+    "module": 2,
+    "topic": "Pentosas y metabolismo de hexosas",
+    "question": "¿Qué enzima fosforila fructosa en el hígado?",
+    "options": [
+      "Fructocinasa",
+      "Galactocinasa",
+      "Glucógeno fosforilasa",
+      "Arginasa"
+    ],
+    "answer": 0,
+    "explanation": "La fructocinasa inicia la entrada hepática de fructosa a sus rutas metabólicas.",
+    "source": "HarperCap20.pdf",
+    "page": 202
+  },
+  {
+    "id": "m2-084",
+    "module": 2,
+    "topic": "Pentosas y metabolismo de hexosas",
+    "question": "¿Qué enzima cataliza la primera fosforilación de galactosa?",
+    "options": [
+      "Galactocinasa",
+      "Fructocinasa",
+      "Glucosa 6-fosfatasa",
+      "Piruvato deshidrogenasa"
+    ],
+    "answer": 0,
+    "explanation": "La galactocinasa forma galactosa 1-fosfato.",
+    "source": "HarperCap20.pdf",
+    "page": 203
+  },
+  {
+    "id": "m2-085",
+    "module": 2,
+    "topic": "Pentosas y metabolismo de hexosas",
+    "question": "¿Qué deficiencia enzimática causa intolerancia hereditaria a la fructosa?",
+    "options": [
+      "Aldolasa B",
+      "Transcetolasa",
+      "Galactocinasa",
+      "Glutatión reductasa"
+    ],
+    "answer": 0,
+    "explanation": "El capítulo relaciona la deficiencia de aldolasa B con intolerancia hereditaria a la fructosa.",
+    "source": "HarperCap20.pdf",
+    "page": 205
+  },
+  {
+    "id": "m2-086",
+    "module": 2,
+    "topic": "Ácidos grasos y eicosanoides",
+    "question": "¿Qué intermediario estimula la acetil-CoA carboxilasa en condiciones favorables a la lipogénesis?",
+    "options": [
+      "Citrato",
+      "Urea",
+      "Lactato",
+      "Citrulina"
+    ],
+    "answer": 0,
+    "explanation": "El citrato promueve la forma activa de acetil-CoA carboxilasa.",
+    "source": "HarperCap23.pdf",
+    "page": 237
+  },
+  {
+    "id": "m2-087",
+    "module": 2,
+    "topic": "Ácidos grasos y eicosanoides",
+    "question": "¿Qué proteína transporta la cadena de acilo en el complejo ácido graso sintasa?",
+    "options": [
+      "Proteína transportadora de acilos (ACP)",
+      "Glucogenina",
+      "Albúmina plasmática",
+      "Hemoglobina"
+    ],
+    "answer": 0,
+    "explanation": "El complejo ácido graso sintasa contiene ACP, que sostiene intermediarios acilo.",
+    "source": "HarperCap23.pdf",
+    "page": 233
+  },
+  {
+    "id": "m2-088",
+    "module": 2,
+    "topic": "Ácidos grasos y eicosanoides",
+    "question": "¿Qué vía citosólica aporta parte del NADPH necesario para sintetizar ácidos grasos?",
+    "options": [
+      "Vía de las pentosas fosfato",
+      "Ciclo de la urea",
+      "Glucogenólisis lisosomal",
+      "Catabolismo proteasómico"
+    ],
+    "answer": 0,
+    "explanation": "La vía de las pentosas fosfato es una fuente de NADPH lipogénico.",
+    "source": "HarperCap23.pdf",
+    "page": 234
+  },
+  {
+    "id": "m2-089",
+    "module": 2,
+    "topic": "Ácidos grasos y eicosanoides",
+    "question": "Además de la vía de pentosas, ¿qué enzima puede aportar NADPH a la lipogénesis?",
+    "options": [
+      "Enzima málica",
+      "Glucógeno fosforilasa",
+      "Arginasa",
+      "Ornitina transcarbamoilasa"
+    ],
+    "answer": 0,
+    "explanation": "La enzima málica produce NADPH en tejidos lipogénicos.",
+    "source": "HarperCap23.pdf",
+    "page": 234
+  },
+  {
+    "id": "m2-090",
+    "module": 2,
+    "topic": "Ácidos grasos y eicosanoides",
+    "question": "¿Qué ruta convierte ácido araquidónico en prostaglandinas y tromboxanos?",
+    "options": [
+      "Ruta de ciclooxigenasa",
+      "Ciclo de la urea",
+      "Ruta de la glucogenina",
+      "Ruta de la galactocinasa"
+    ],
+    "answer": 0,
+    "explanation": "Los prostanoides proceden de la vía de la ciclooxigenasa.",
+    "source": "HarperCap23.pdf",
+    "page": 239
+  },
+  {
+    "id": "m2-091",
+    "module": 2,
+    "topic": "Ácidos grasos y eicosanoides",
+    "question": "¿Cómo se abrevia la prostaciclina formada a partir de intermediarios prostanoides?",
+    "options": [
+      "PGI₂",
+      "TXA₂",
+      "NADPH",
+      "UDPGlc"
+    ],
+    "answer": 0,
+    "explanation": "El texto identifica la prostaciclina como PGI₂, diferente del tromboxano TXA₂.",
+    "source": "HarperCap23.pdf",
+    "page": 239
+  },
+  {
+    "id": "m2-092",
+    "module": 2,
+    "topic": "Biosíntesis de aminoácidos",
+    "question": "¿Qué intermediario del ciclo cítrico aporta el esqueleto carbonado del glutamato?",
+    "options": [
+      "α-cetoglutarato",
+      "Oxaloacetato exclusivamente",
+      "Citrulina",
+      "Malonil-CoA"
+    ],
+    "answer": 0,
+    "explanation": "La formación de glutamato parte de α-cetoglutarato.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 283
+  },
+  {
+    "id": "m2-093",
+    "module": 2,
+    "topic": "Biosíntesis de aminoácidos",
+    "question": "¿De qué aminoácido se sintetiza asparagina?",
+    "options": [
+      "Aspartato",
+      "Alanina",
+      "Lisina",
+      "Leucina"
+    ],
+    "answer": 0,
+    "explanation": "La asparagina se forma por amidación de aspartato.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 283
+  },
+  {
+    "id": "m2-094",
+    "module": 2,
+    "topic": "Biosíntesis de aminoácidos",
+    "question": "¿Qué aminoácido sirve de precursor para la prolina?",
+    "options": [
+      "Glutamato",
+      "Triptófano",
+      "Lisina",
+      "Isoleucina"
+    ],
+    "answer": 0,
+    "explanation": "La vía del glutamato conduce a prolina a través de intermediarios derivados.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 284
+  },
+  {
+    "id": "m2-095",
+    "module": 2,
+    "topic": "Biosíntesis de aminoácidos",
+    "question": "¿Cuál es el precursor de la tirosina en seres humanos?",
+    "options": [
+      "Fenilalanina",
+      "Valina",
+      "Glicina",
+      "Prolina"
+    ],
+    "answer": 0,
+    "explanation": "La tirosina se forma mediante hidroxilación de fenilalanina.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 285
+  },
+  {
+    "id": "m2-096",
+    "module": 2,
+    "topic": "Biosíntesis de aminoácidos",
+    "question": "¿Qué compuesto aporta azufre para formar cisteína?",
+    "options": [
+      "Homocisteína",
+      "Oxaloacetato",
+      "Fructosa",
+      "Citrato"
+    ],
+    "answer": 0,
+    "explanation": "La homocisteína aporta azufre y la serina el esqueleto carbonado.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 286
+  },
+  {
+    "id": "m2-097",
+    "module": 2,
+    "topic": "Biosíntesis de aminoácidos",
+    "question": "¿Qué aminoácido puede ser nutricionalmente semiesencial durante el crecimiento?",
+    "options": [
+      "Arginina",
+      "Leucina",
+      "Lisina",
+      "Triptófano"
+    ],
+    "answer": 0,
+    "explanation": "La arginina puede sintetizarse a una velocidad insuficiente durante el crecimiento.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 282
+  },
+  {
+    "id": "m2-098",
+    "module": 2,
+    "topic": "Catabolismo de proteínas y nitrógeno",
+    "question": "¿Qué complejo degrada proteínas marcadas con ubiquitina?",
+    "options": [
+      "Proteasoma",
+      "Glucógeno sintasa",
+      "Complejo P450",
+      "Ácido graso sintasa"
+    ],
+    "answer": 0,
+    "explanation": "Muchas proteínas ubiquitinadas se degradan mediante el proteasoma.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 288
+  },
+  {
+    "id": "m2-099",
+    "module": 2,
+    "topic": "Catabolismo de proteínas y nitrógeno",
+    "question": "¿Qué molécula activa la carbamoil fosfato sintasa I del ciclo de la urea?",
+    "options": [
+      "N-acetilglutamato",
+      "Fructosa 2,6-bisfosfato",
+      "Acetil-CoA directamente",
+      "UDP-glucosa"
+    ],
+    "answer": 0,
+    "explanation": "La carbamoil fosfato sintasa I necesita N-acetilglutamato para actuar.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 293
+  },
+  {
+    "id": "m2-100",
+    "module": 2,
+    "topic": "Catabolismo de proteínas y nitrógeno",
+    "question": "¿De dónde procede uno de los átomos de nitrógeno de la urea además del amonio?",
+    "options": [
+      "Aspartato",
+      "Palmitato",
+      "Glucógeno",
+      "Lactato"
+    ],
+    "answer": 0,
+    "explanation": "El nitrógeno amino del aspartato contribuye a la molécula de urea.",
+    "source": "HarperCap 28 S14.pdf",
+    "page": 296
   }
 ]

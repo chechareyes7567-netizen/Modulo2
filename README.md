@@ -1,6 +1,6 @@
 # Cuestionario de Medicina · Módulo 2
 
-Proyecto Flask funcional e independiente. Contiene 60 preguntas nuevas sustentadas en las páginas presentes de los ocho PDF compartidos. No contiene los PDF.
+Proyecto Flask independiente. Contiene 100 preguntas sustentadas en las páginas presentes de los ocho PDF compartidos. No contiene los PDF. Cada examen mixto toma 20 preguntas aleatorias; por tema muestra tantas preguntas como haya en ese tema. Las opciones se barajan y puede activarse o desactivarse la corrección inmediata.
 
 ## Probarlo localmente
 

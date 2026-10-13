@@ -3,47 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Medicina · Módulo 2</title>
+  <title>Cuestionario de Medicina · Módulo 2</title>
   <style>
-    :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#172635;background:#f3f6f8}
-    *{box-sizing:border-box}body{margin:0}main{max-width:760px;margin:auto;padding:24px 16px 72px}
-    .eyebrow{color:#126b65;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.77rem}
-    h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.1;margin:.5rem 0}h2{font-size:1.45rem}
-    p{line-height:1.6}.muted{color:#5a6976}.card{background:white;border:1px solid #e0e8e9;border-radius:22px;padding:clamp(18px,4vw,30px);box-shadow:0 12px 30px #2338440b;margin-top:20px}
-    label{display:block;font-weight:700;margin:18px 0 8px}select,button{font:inherit}select{width:100%;border:1px solid #aabbbc;border-radius:10px;padding:13px;background:white;color:#172635}
-    button{cursor:pointer;border-radius:12px;border:1px solid #bfd1d2;background:white;color:#172635;padding:14px 18px;font-weight:700}
-    button:hover{border-color:#126b65}.primary{background:#126b65;color:white;border-color:#126b65}.primary:hover{background:#0b5550}.primary:disabled{opacity:.5;cursor:not-allowed}
-    .option{display:block;width:100%;text-align:left;margin:10px 0;line-height:1.45}.option.selected{background:#dbf2ed;border-color:#168276}.option:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #f3ad55;outline-offset:2px}
-    .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.progress{height:9px;background:#e6eeee;border-radius:9px;overflow:hidden;margin:20px 0}.progress div{background:#168276;height:100%;transition:width .2s}
-    .review{border-top:1px solid #e0e8e9;padding:16px 0}.review p{margin:7px 0}.good{color:#147248}.bad{color:#a63737}.source{font-size:.88rem;color:#536474}
+    :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#1b2c31;background:#f3f7f6}
+    *{box-sizing:border-box}body{margin:0}header{background:#126d66;color:white;text-align:center;padding:20px 16px 28px}
+    header h1{font-size:clamp(1.7rem,4vw,2.15rem);margin:0 0 4px;line-height:1.2}header p{font-size:1.16rem;margin:0;opacity:.94}
+    main{max-width:970px;margin:auto;padding:22px 16px 76px}h2{font-size:clamp(1.25rem,3vw,1.55rem);margin:0 0 20px}p{line-height:1.55}
+    .muted{color:#536872}.card{background:white;border:1px solid #d4e2df;border-radius:18px;padding:clamp(20px,4vw,26px);box-shadow:0 2px 3px #163d3b08;margin-bottom:18px}
+    .intro{margin:0 0 18px}.choice{display:flex;align-items:center;gap:14px;margin:0 0 22px;cursor:pointer;font-size:1.08rem}
+    .choice input{width:28px;height:28px;margin:0;accent-color:#07524e;cursor:pointer;flex:none}
+    button{font:inherit;cursor:pointer;border-radius:14px;border:2px solid #d3e1df;background:white;color:#1b2c31;padding:15px 18px;font-weight:650}
+    button:hover{border-color:#117970}.primary{background:#137c74;color:white;border-color:#137c74}.primary:hover{background:#0b655e}.primary:disabled{opacity:.55;cursor:not-allowed}
+    .mix{display:block;width:100%;min-height:74px;font-size:1.18rem}.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .topic{display:flex;align-items:center;gap:18px;width:100%;min-height:108px;text-align:left;padding:20px 23px}.topic .icon{font-size:1.85rem;flex:none;width:42px;text-align:center}
+    .topic strong{display:block;font-size:1.1rem;line-height:1.35}.topic small{display:block;font-size:.91rem;color:#536872;margin-top:7px;font-weight:400}
+    .option{display:block;width:100%;text-align:left;margin:10px 0;line-height:1.45}.option.selected{background:#e2f3ef;border-color:#137c74}
+    button:focus-visible,input:focus-visible{outline:3px solid #edac50;outline-offset:2px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.progress{height:10px;background:#e6eeee;border-radius:9px;overflow:hidden;margin:20px 0}.progress div{background:#137c74;height:100%;transition:width .2s}
+    .quiz-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:20px}.small-button{font-size:.94rem;padding:12px 15px}
+    #feedback{border-top:1px solid #d7e2df;margin-top:20px;padding-top:6px}.review{border-top:1px solid #e0e8e9;padding:18px 0}.review p{margin:8px 0}
+    .good{color:#13734a}.bad{color:#a63131}.source{font-size:.88rem;color:#536872}
+    @media(max-width:620px){header{padding:20px 14px}main{padding:18px 12px 60px}.topic-grid{grid-template-columns:1fr}.topic{min-height:90px;padding:16px}.mix{font-size:1rem}.choice{font-size:1rem}}
     [hidden]{display:none!important}
   </style>
 </head>
 <body>
+<header><h1>Cuestionario de Medicina</h1><p>Módulo 2 · Bioquímica</p></header>
 <main>
-  <div class="eyebrow">Cuestionario de Medicina</div>
-  <h1>Módulo 2</h1>
-  <p class="muted">Practica bioquímica con preguntas basadas en los documentos de estudio. Al terminar, revisa las explicaciones y las páginas de referencia.</p>
-
-  <section class="card" id="start">
-    <h2>Preparar práctica</h2>
-    <label for="topic">Tema</label>
-    <select id="topic"><option value="">Todos los temas · examen mixto</option></select>
-    <p class="muted" id="available">Cargando preguntas…</p>
-    <button class="primary" id="begin" disabled>Empezar</button>
-  </section>
+  <div id="start">
+    <section class="card">
+      <h2>¿Qué quieres practicar?</h2>
+      <p class="muted intro" id="available">Cargando preguntas…</p>
+      <label class="choice"><input type="checkbox" id="instant" checked><span>Ver si acerté al instante, después de cada pregunta</span></label>
+      <button class="primary mix" id="begin" disabled>🎲 Examen mixto · 20 preguntas al azar</button>
+    </section>
+    <section class="card">
+      <h2>O elige un tema</h2>
+      <div class="topic-grid" id="topics"></div>
+    </section>
+  </div>
 
   <section class="card" id="quiz" hidden aria-live="polite">
     <div class="row"><strong id="step"></strong><span id="score" class="muted"></span></div>
-    <div class="progress" role="progressbar" aria-label="Progreso"><div id="bar"></div></div>
+    <div class="progress" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="100"><div id="bar"></div></div>
     <h2 id="question"></h2>
     <div id="options"></div>
-    <button class="primary" id="next" disabled>Confirmar respuesta</button>
+    <div class="quiz-actions"><button class="primary" id="next" disabled>Confirmar respuesta</button><button class="small-button" id="quit">Volver a los temas</button></div>
     <div id="feedback" hidden></div>
   </section>
 
   <section class="card" id="results" hidden>
-    <div class="eyebrow">Resultado</div>
+    <p class="muted">Resultado de la práctica</p>
     <h2 id="final-score"></h2>
     <button class="primary" id="again">Nuevo intento</button>
     <div id="review"></div>
@@ -52,6 +62,18 @@
 <script>
 let bank=[], round=[], position=0, selected=null, submitted=false, correctCount=0, responses=[];
 const byId=id=>document.getElementById(id);
+const icons={
+  'Oxidación biológica':'⚡','Metabolismo del glucógeno':'🧱',
+  'Gluconeogénesis y glucemia':'🩸','Pentosas y metabolismo de hexosas':'🔬',
+  'Ácidos grasos y eicosanoides':'🧬','Biosíntesis de aminoácidos':'🧩',
+  'Catabolismo de proteínas y nitrógeno':'♻️'
+};
+const labels={
+  'Oxidación biológica':'Harper, Cap. 12','Metabolismo del glucógeno':'Harper, Cap. 18',
+  'Gluconeogénesis y glucemia':'Harper, Cap. 19','Pentosas y metabolismo de hexosas':'Harper, Cap. 20',
+  'Ácidos grasos y eicosanoides':'Harper, Cap. 23','Biosíntesis de aminoácidos':'Harper, Cap. 27',
+  'Catabolismo de proteínas y nitrógeno':'Harper, Caps. 28–29'
+};
 const shuffle=items=>{
   const a=[...items];
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}
@@ -60,24 +82,24 @@ const shuffle=items=>{
 fetch('/api/modulo2').then(r=>{if(!r.ok)throw Error('No se pudo cargar el banco');return r.json()}).then(data=>{
   bank=data;
   [...new Set(bank.map(q=>q.topic))].sort().forEach(topic=>{
-    const option=document.createElement('option');option.value=topic;option.textContent=topic;byId('topic').append(option);
+    const button=document.createElement('button');button.type='button';button.className='topic';
+    const icon=document.createElement('span');icon.className='icon';icon.setAttribute('aria-hidden','true');icon.textContent=icons[topic]||'📚';
+    const content=document.createElement('span');const title=document.createElement('strong');title.textContent=topic;
+    const caption=document.createElement('small');caption.textContent=`${labels[topic]||'Bioquímica'} · ${bank.filter(q=>q.topic===topic).length} preguntas`;
+    content.append(title,caption);button.append(icon,content);
+    button.addEventListener('click',()=>begin(topic));byId('topics').append(button);
   });
-  byId('begin').disabled=false;updateAvailable();
+  byId('begin').disabled=false;
+  byId('available').textContent=`Banco de ${bank.length} preguntas. Cada intento baraja el orden de preguntas y opciones.`;
 }).catch(()=>byId('available').textContent='No se pudieron cargar las preguntas. Recarga la página.');
-function updateAvailable(){
-  const topic=byId('topic').value;
-  const n=bank.filter(q=>!topic||q.topic===topic).length;
-  byId('available').textContent=`${n} preguntas disponibles · el intento tendrá ${Math.min(20,n)} preguntas.`;
-}
-byId('topic').addEventListener('change',updateAvailable);
-byId('begin').addEventListener('click',()=>{
-  const topic=byId('topic').value;
+byId('begin').addEventListener('click',()=>begin(''));
+function begin(topic){
   round=shuffle(bank.filter(q=>!topic||q.topic===topic)).slice(0,20);
   if(!round.length)return;
   position=0;selected=null;submitted=false;correctCount=0;responses=[];
   byId('start').hidden=true;byId('results').hidden=true;byId('quiz').hidden=false;
-  show();
-});
+  show();window.scrollTo({top:0,behavior:'smooth'});
+}
 function show(){
   const q=round[position];selected=null;submitted=false;
   byId('step').textContent=`Pregunta ${position+1} de ${round.length}`;
@@ -103,6 +125,10 @@ byId('next').addEventListener('click',()=>{
     const q=round[position];submitted=true;
     const good=selected===q.answer;if(good)correctCount++;
     responses.push({question:q,selected,good});
+    if(!byId('instant').checked){
+      if(++position<round.length)show();else finish();
+      return;
+    }
     const info=byId('feedback');info.hidden=false;
     const result=document.createElement('p');result.className=good?'good':'bad';
     result.textContent=good?'¡Correcto!':`Respuesta correcta: ${q.options[q.answer]}`;
@@ -127,6 +153,9 @@ function finish(){
 }
 byId('again').addEventListener('click',()=>{
   byId('results').hidden=true;byId('start').hidden=false;window.scrollTo({top:0,behavior:'smooth'});
+});
+byId('quit').addEventListener('click',()=>{
+  byId('quiz').hidden=true;byId('start').hidden=false;window.scrollTo({top:0,behavior:'smooth'});
 });
 </script>
 </body>
