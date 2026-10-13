@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicina · Módulo 2</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#172635;background:#f3f6f8}
+    *{box-sizing:border-box}body{margin:0}main{max-width:760px;margin:auto;padding:24px 16px 72px}
+    .eyebrow{color:#126b65;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.77rem}
+    h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.1;margin:.5rem 0}h2{font-size:1.45rem}
+    p{line-height:1.6}.muted{color:#5a6976}.card{background:white;border:1px solid #e0e8e9;border-radius:22px;padding:clamp(18px,4vw,30px);box-shadow:0 12px 30px #2338440b;margin-top:20px}
+    label{display:block;font-weight:700;margin:18px 0 8px}select,button{font:inherit}select{width:100%;border:1px solid #aabbbc;border-radius:10px;padding:13px;background:white;color:#172635}
+    button{cursor:pointer;border-radius:12px;border:1px solid #bfd1d2;background:white;color:#172635;padding:14px 18px;font-weight:700}
+    button:hover{border-color:#126b65}.primary{background:#126b65;color:white;border-color:#126b65}.primary:hover{background:#0b5550}.primary:disabled{opacity:.5;cursor:not-allowed}
+    .option{display:block;width:100%;text-align:left;margin:10px 0;line-height:1.45}.option.selected{background:#dbf2ed;border-color:#168276}.option:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #f3ad55;outline-offset:2px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.progress{height:9px;background:#e6eeee;border-radius:9px;overflow:hidden;margin:20px 0}.progress div{background:#168276;height:100%;transition:width .2s}
+    .review{border-top:1px solid #e0e8e9;padding:16px 0}.review p{margin:7px 0}.good{color:#147248}.bad{color:#a63737}.source{font-size:.88rem;color:#536474}
+    [hidden]{display:none!important}
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Cuestionario de Medicina</div>
+  <h1>Módulo 2</h1>
+  <p class="muted">Practica bioquímica con preguntas basadas en los documentos de estudio. Al terminar, revisa las explicaciones y las páginas de referencia.</p>
+
+  <section class="card" id="start">
+    <h2>Preparar práctica</h2>
+    <label for="topic">Tema</label>
+    <select id="topic"><option value="">Todos los temas · examen mixto</option></select>
+    <p class="muted" id="available">Cargando preguntas…</p>
+    <button class="primary" id="begin" disabled>Empezar</button>
+  </section>
+
+  <section class="card" id="quiz" hidden aria-live="polite">
+    <div class="row"><strong id="step"></strong><span id="score" class="muted"></span></div>
+    <div class="progress" role="progressbar" aria-label="Progreso"><div id="bar"></div></div>
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <button class="primary" id="next" disabled>Confirmar respuesta</button>
+    <div id="feedback" hidden></div>
+  </section>
+
+  <section class="card" id="results" hidden>
+    <div class="eyebrow">Resultado</div>
+    <h2 id="final-score"></h2>
+    <button class="primary" id="again">Nuevo intento</button>
+    <div id="review"></div>
+  </section>
+</main>
+<script>
+let bank=[], round=[], position=0, selected=null, submitted=false, correctCount=0, responses=[];
+const byId=id=>document.getElementById(id);
+const shuffle=items=>{
+  const a=[...items];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}
+  return a;
+};
+fetch('/api/modulo2').then(r=>{if(!r.ok)throw Error('No se pudo cargar el banco');return r.json()}).then(data=>{
+  bank=data;
+  [...new Set(bank.map(q=>q.topic))].sort().forEach(topic=>{
+    const option=document.createElement('option');option.value=topic;option.textContent=topic;byId('topic').append(option);
+  });
+  byId('begin').disabled=false;updateAvailable();
+}).catch(()=>byId('available').textContent='No se pudieron cargar las preguntas. Recarga la página.');
+function updateAvailable(){
+  const topic=byId('topic').value;
+  const n=bank.filter(q=>!topic||q.topic===topic).length;
+  byId('available').textContent=`${n} preguntas disponibles · el intento tendrá ${Math.min(20,n)} preguntas.`;
+}
+byId('topic').addEventListener('change',updateAvailable);
+byId('begin').addEventListener('click',()=>{
+  const topic=byId('topic').value;
+  round=shuffle(bank.filter(q=>!topic||q.topic===topic)).slice(0,20);
+  if(!round.length)return;
+  position=0;selected=null;submitted=false;correctCount=0;responses=[];
+  byId('start').hidden=true;byId('results').hidden=true;byId('quiz').hidden=false;
+  show();
+});
+function show(){
+  const q=round[position];selected=null;submitted=false;
+  byId('step').textContent=`Pregunta ${position+1} de ${round.length}`;
+  byId('score').textContent=`${correctCount} aciertos`;
+  byId('bar').style.width=`${100*position/round.length}%`;
+  byId('quiz').querySelector('.progress').setAttribute('aria-valuenow',String(Math.round(100*position/round.length)));
+  byId('question').textContent=q.question;
+  const box=byId('options');box.replaceChildren();
+  shuffle(q.options.map((option,index)=>({option,index}))).forEach(({option,index})=>{
+    const button=document.createElement('button');button.type='button';button.className='option';button.textContent=option;
+    button.addEventListener('click',()=>{
+      if(submitted)return;
+      selected=index;box.querySelectorAll('button').forEach(b=>b.classList.remove('selected'));
+      button.classList.add('selected');byId('next').disabled=false;
+    });box.append(button);
+  });
+  byId('next').textContent='Confirmar respuesta';byId('next').disabled=true;
+  byId('feedback').hidden=true;byId('feedback').replaceChildren();
+}
+byId('next').addEventListener('click',()=>{
+  if(!submitted){
+    if(selected===null)return;
+    const q=round[position];submitted=true;
+    const good=selected===q.answer;if(good)correctCount++;
+    responses.push({question:q,selected,good});
+    const info=byId('feedback');info.hidden=false;
+    const result=document.createElement('p');result.className=good?'good':'bad';
+    result.textContent=good?'¡Correcto!':`Respuesta correcta: ${q.options[q.answer]}`;
+    const explanation=document.createElement('p');explanation.textContent=q.explanation;
+    const source=document.createElement('p');source.className='source';source.textContent=`Fuente: ${q.source}, página impresa ${q.page}.`;
+    info.append(result,explanation,source);
+    byId('next').textContent=position+1===round.length?'Ver resultado':'Siguiente pregunta';
+  }else if(++position<round.length){show()}else{finish()}
+});
+function finish(){
+  byId('quiz').hidden=true;byId('results').hidden=false;
+  byId('final-score').textContent=`${correctCount} de ${round.length} respuestas correctas`;
+  const container=byId('review');container.replaceChildren();
+  responses.forEach(({question:q,selected,good},i)=>{
+    const wrap=document.createElement('div');wrap.className='review';
+    const title=document.createElement('strong');title.textContent=`${i+1}. ${q.question}`;
+    const outcome=document.createElement('p');outcome.className=good?'good':'bad';outcome.textContent=`Tu respuesta: ${q.options[selected]} ${good?'✓':'· correcta: '+q.options[q.answer]}`;
+    const detail=document.createElement('p');detail.textContent=q.explanation;
+    const source=document.createElement('p');source.className='source';source.textContent=`${q.source}, p. ${q.page}`;
+    wrap.append(title,outcome,detail,source);container.append(wrap);
+  });window.scrollTo({top:0,behavior:'smooth'});
+}
+byId('again').addEventListener('click',()=>{
+  byId('results').hidden=true;byId('start').hidden=false;window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
